@@ -115,5 +115,9 @@ nav img {
     .sidebar{
         width: 100%;
     }
+
+    body{
+        background-size: 750px 670px;
+    }
 }
 
