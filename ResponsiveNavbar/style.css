@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background-image: url(./assets/Bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+nav{
+    background-color: white;
+    box-shadow: 3px 3px 5px grey;
+}
+
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: black;
+}
+
+nav li{
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+nav a:hover{
+    background-color: lightslategray;
+}
+
+nav li:first-child{
+    margin-right: auto;
+}
+
+/* SideBar Button of Side Menu */
+nav img {
+    height: 25px;
+    padding: 0 30px;
+    cursor: pointer;
+}
+
+.menu-btn{
+    display: none;
+}
+
+
+.sidebar{
+    /* To keep the Sidebar on the left */
+        position: fixed; 
+        top: 0;
+        right: 0;
+        z-index: 999;
+    /* To keep the Sidebar on the left and up on the main Navbar */
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.164);
+
+    backdrop-filter: blur(10px); /* to Blu the Background of the component*/
+
+    box-shadow: -10 0 10px rgb(35, 35, 35);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li{
+    width: 100%;
+    /* list-style: none; */
+}
+
+.sidebar a{
+    width: 100%;
+    /* text-decoration: none; */
+}
+
+/* HideBar of Navbar Menu */
+.sidebar img{
+    height: 18px;
+    margin: 20px 0 30px 0;
+}
+
+
+/* Media Query Large, Medium, Small Device Navbar */
+@media(max-width: 800px){
+    .hideOnMobile{
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+}
+
+@media(max-width: 450px){
+    .sidebar{
+        width: 100%;
+    }
+}
+
